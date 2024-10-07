@@ -1,0 +1,105 @@
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #4A235A;
+}
+
+h1 {
+    color: #6C3483;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #D7BDE2;
+}
+
+a {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #8E44AD;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #6C3483;
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #4A235A;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #8E44AD;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #6C3483;
+}
+nav {
+    background-color: #D7BDE2; /* Optional: Change background color for navigation */
+    padding: 10px 0; /* Optional: Add padding */
+}
+
+.nav-links {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the links horizontally */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Add space between the links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Change link color */
+}
+
+.nav-links a:hover {
+    color: #6C3483; /* Change color on hover */
+}

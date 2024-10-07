@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense List</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <ul>
+        <a href="{% url 'login' %}">Home</a></li>
+        <a href="{% url 'register' %}">Register</a></li>
+        <a href="{% url 'add_expense' %}">Add Expense</a></li>
+        <a href="{% url 'list_expenses' %}">Expenses List</a></li>
+    </ul>
+    <h1>All Expenses</h1>
+    <a href="{% url 'add_expense' %}">Add New Expense</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Payment Method</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for expense in expenses %}
+            <tr>
+                <td>{{ expense.date }}</td>
+                <td>{{ expense.description }}</td>
+                <td>{{ expense.category.name }}</td>
+                <td>{{ expense.amount }}</td>
+                <td>{{ expense.payment_method }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No expenses found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
